@@ -243,29 +243,24 @@ $$
 $$
 
 ### Question 2
-1) 
+1) and 2)
 ```{image} matlab/question_2.png
 :alt: Answer question 2
-:height: 200px
-:align: left 
+:height: 400px
+:align: center 
 ```
-2) 
-```{image} matlab/question_2.png
-:alt: Answer question 2
-:height: 200px
-:align: left 
-```
+
 3) 
 ```{image} matlab/question2.png
 :alt: Answer question 2
-:height: 200px
-:align: left 
+:height: 400px
+:align: center 
 ```
 
 
 ### Question 4
 
-1) There are 3 choices for the first node, and 2 choices for each of the 10 subsequent nodes. The total number of walks is therefore $3 × 2^10$. 
+1) There are 3 choices for the first node, and 2 choices for each of the 10 subsequent nodes. The total number of walks is therefore $3 × 2^{10}$. 
 ```{image} matlab/K3.png
 :alt: Answer question 4
 :height: 200px
@@ -283,18 +278,19 @@ Path distances from node 6: $d = [inf, inf, 2, 1, 3, 0, 1]$
 
 ### Question 7
 
-1)
+1.
 ```{image} matlab/subgraph.png
 :alt: Answer question 7
 :height: 200px
 :align: center 
 ```
-2) 
+1. For node order 1, 2, 3, 6:
+
 $$
 \begin{bmatrix}
 	0 & 1 & 1 & 0\\ 1 & 0 & 0 & 0\\ 0 & 0 & 0 & 0\\ 0 & 0 & 0 & 0
-\end{bmatrix} $$ for node order 1, 2, 3, 6
-
+\end{bmatrix}  
+$$
 
 ### Question 8
 Connected components: $[1, 5, 6, 7, 9], [4, 8], [2, 3, 10]$
