@@ -246,18 +246,17 @@ $$
 1) ```{image} matlab/question_2.png
 :alt: Answer question 2
 :height: 200px
-:align: left 
-```
+:align: left ```
+
 2) ```{image} matlab/question_2.png
 :alt: Answer question 2
 :height: 200px
-:align: left 
-```
+:align: left ```
+
 3) ```{image} matlab/question2.png
 :alt: Answer question 2
 :height: 200px
-:align: left 
-```
+:align: left ```
 
 
 ### Question 4
@@ -280,13 +279,14 @@ Path distances from node 6: $d = [inf, inf, 2, 1, 3, 0, 1]$
 
 ### Question 7
 
-1)
+1.
 ```{image} matlab/subgraph.png
 :alt: Answer question 7
 :height: 200px
 :align: center 
 ```
-2) For node order 1, 2, 3, 6:
+1. For node order 1, 2, 3, 6:
+
 $$
 \begin{bmatrix}
 	0 & 1 & 1 & 0\\ 1 & 0 & 0 & 0\\ 0 & 0 & 0 & 0\\ 0 & 0 & 0 & 0
