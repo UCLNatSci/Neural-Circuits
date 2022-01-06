@@ -243,24 +243,17 @@ $$
 $$
 
 ### Question 2
-1) 
+1) and 2)
 ```{image} matlab/question_2.png
 :alt: Answer question 2
-:height: 200px
-:align: center 
-```
-
-2) 
-```{image} matlab/question_2.png
-:alt: Answer question 2
-:height: 200px
+:height: 400px
 :align: center 
 ```
 
 3) 
 ```{image} matlab/question2.png
 :alt: Answer question 2
-:height: 200px
+:height: 400px
 :align: center 
 ```
 
