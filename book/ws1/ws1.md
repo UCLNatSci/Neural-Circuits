@@ -66,7 +66,6 @@ $$
 \end{bmatrix}
 $$
 ```
-## Questions
 
 ### Question 1
 
@@ -100,10 +99,6 @@ $$
 $$
 Two of the three graphs are the same. Which two?
 
-## Answers
-
-Coming soon!
-
 ## Walks and Paths
 
 A **walk** in a graph is a sequence of nodes formed by following edges. A walk may visit the same node several times. For example, in the egg-laying graph $[1, 3, 7, 6]$ is a walk from node 1 to node 6, and $[1,2,1,3]$ is a walk from node 1 to node 3.
@@ -112,9 +107,9 @@ The **length** of a walk (or path) is the number of edges (which is one less tha
 
 ### Question 4
 
-> (a) The **complete directed graph** $K_n$ is a directed graph with $n$ nodes and an edge connecting every node to every other node (but no node is connected to itself). Sketch $K_3$. In $K_3$, how many distinct length 10 walks are there?
-> (b) In the egg-laying circuit, identify all paths from node 6 to node 4, and all paths from node 4 to node 6.
-> (c) Find the longest path in the egg-laying circuit.
+1. The **complete directed graph** $K_n$ is a directed graph with $n$ nodes and an edge connecting every node to every other node (but no node is connected to itself). Sketch $K_3$. In $K_3$, how many distinct length 10 walks are there?
+1. In the egg-laying circuit, identify all paths from node 6 to node 4, and all paths from node 4 to node 6.
+1. Find the longest path in the egg-laying circuit.
 
 ## Shortest Paths
 
@@ -155,8 +150,8 @@ Note that within each level, the nodes may be visited in any order.
 
 ### Question 6
 
-> (a) Compute a breadth first search of the egg-laying graph, starting from node 2, and use this to determine the path distance of each node from node 2.
-> (b) Do the same starting from node 6.
+1. Compute a breadth first search of the egg-laying graph, starting from node 2, and use this to determine the path distance of each node from node 2.
+1. Do the same starting from node 6.
 
 ## Subgraphs
 
@@ -172,8 +167,8 @@ The graph on the right is a subgraph of the graph on the left consisting of the 
 
 ### Question 7
 For the subgraph of the egg-laying circuit consisting of nodes $[1, 2, 3, 6]$:
-> (a) Draw its graph
-> (b) Write down its adjacency matrix
+1. Draw its graph
+1. Write down its adjacency matrix
 
 ## Connectedness
 
@@ -189,7 +184,7 @@ Use breadth first search to determine all connected components of the undirected
 1. Choose any unvisited node as the starting point of a new BFS.
 1. Continue until all nodes have been allocated to a component.
 
-> A directed graph is **strongly connected** if there is a path between every node and every other node (in both directions).
+A directed graph is **strongly connected** if there is a path between every node and every other node (in both directions).
 
 A directed graph is **weakly connected** if it is not strongly connected but its underlying undirected graph is connected, where the **underlying undirected graph** of a digraph is the undirected graph formed by replacing directed edges by undirected edges.
 
@@ -227,8 +222,83 @@ The algorithm described in the previous question is very inefficient. In practic
 
 Consider the graph given by adjacency list $[5], [1, 3], [2, 4, 6], [2], [1], [4]$.
 
-> (a) *Without* drawing the graph, use BFS to determine all shortest paths starting from node 3.
+1. *Without* drawing the graph, use BFS to determine all shortest paths starting from node 3.
 
-> (b) Draw the graph and determine its strongly and weakly connected components.
+1. Draw the graph and determine its strongly and weakly connected components.
 
-   
+
+## Answers
+
+### Question 1
+
+1. $[1,6],[6,1],[3,1],[3,4],[6,4],[4,4],[3,2],[4,2],[4,5],[2,5]$ (in any order)
+1. $[6],[5],[1,4,2],[4,2,5],[],[1,4]$
+1. 
+$$
+\begin{bmatrix}
+	0 & 0 & 0 & 0 & 0 & 1\\ 0 & 0 & 0 & 0 & 1 & 0\\ 1 & 1 & 0 & 1 & 0 & 0\\ 0 & 1 & 0 & 1 & 1 & 0\\ 0 & 0 & 0 & 0 & 0 & 0\\ 1 & 0 & 0 & 1 & 0 & 0
+\end{bmatrix}
+$$
+
+### Question 2
+1. 
+```{image} matlab/question_2.png
+:alt: Answer question 2
+:height: 200px
+:align: left
+```
+1. 
+```{image} matlab/question_2.png
+:alt: Answer question 2
+:height: 200px
+:align: left
+```
+1. 
+```{image} matlab/question2.png
+:alt: Answer question 2
+:height: 200px
+:align: left
+```
+
+### Question 4
+
+1. There are 3 choices for the first node, and 2 choices for each of the 10 subsequent nodes. The total number of walks is therefore $3 × 2^10$.
+
+```{image} matlab/K3.png
+:alt: Answer question 4
+:height: 200px
+:align: center
+```
+
+1. Paths from node 6 to node 4: $[6,4],[6,7,4],[6,7,3,4],[6,7,3,5,4]$. Paths from node 4 to node 6: none.
+1. $[2,1,3,7,6,4]$.
+
+### Question 6
+
+1. BFS starting at node 2:$[2,1,4,3,5,7,6]$
+Path distances from node 2: $d = [1,0,2,1,3,4,3]$ where $d(i)$ is the distance from node $i$.
+1. BFS starting at node 6: $[6, 4, 7, 3, 5]$
+Path distances from node 6: $d = [inf, inf, 2, 1, 3, 0, 1]$
+
+### Question 7
+
+1. 
+```{image} matlab/subgraph.png
+:alt: Answer question 7
+:height: 200px
+:align: center
+```
+
+1. 
+$$
+\begin{bmatrix}
+	0 & 1 & 1 & 0\\ 1 & 0 & 0 & 0\\ 0 & 0 & 0 & 0\\ 0 & 0 & 0 & 0
+\end{bmatrix}
+$$
+for node order 1, 2, 3, 6
+
+### Question 8
+Connected components: $[1, 5, 6, 7, 9], [4, 8], [2, 3, 10]$
+
+### Question 9
+Strongly connected components: $[3, 6, 8], [2, 4], [1, 5, 7, 9]$
