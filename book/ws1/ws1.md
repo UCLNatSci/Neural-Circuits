@@ -243,25 +243,31 @@ $$
 $$
 
 ### Question 2
-1) ```{image} matlab/question_2.png
+1) 
+```{image} matlab/question_2.png
 :alt: Answer question 2
 :height: 200px
-:align: left ```
+:align: center 
+```
 
-2) ```{image} matlab/question_2.png
+2) 
+```{image} matlab/question_2.png
 :alt: Answer question 2
 :height: 200px
-:align: left ```
+:align: center 
+```
 
-3) ```{image} matlab/question2.png
+3) 
+```{image} matlab/question2.png
 :alt: Answer question 2
 :height: 200px
-:align: left ```
+:align: center 
+```
 
 
 ### Question 4
 
-1) There are 3 choices for the first node, and 2 choices for each of the 10 subsequent nodes. The total number of walks is therefore $3 × 2^(10)$. 
+1) There are 3 choices for the first node, and 2 choices for each of the 10 subsequent nodes. The total number of walks is therefore $3 × 2^{10}$. 
 ```{image} matlab/K3.png
 :alt: Answer question 4
 :height: 200px
