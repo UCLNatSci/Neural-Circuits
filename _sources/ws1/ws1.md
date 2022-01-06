@@ -102,7 +102,9 @@ Two of the three graphs are the same. Which two?
 ## Walks and Paths
 
 A **walk** in a graph is a sequence of nodes formed by following edges. A walk may visit the same node several times. For example, in the egg-laying graph $[1, 3, 7, 6]$ is a walk from node 1 to node 6, and $[1,2,1,3]$ is a walk from node 1 to node 3.
-A **path** is a walk which does not visit any node more than once. So $[1, 3, 7, 6]$ is a path but $[1, 2, 1, 3]$ is not.
+
+A **path** is a walk which does not visit any node more than once. So $[1, 3, 7, 6]$ is a path but $[1, 2, 1, 3]$ is not. 
+
 The **length** of a walk (or path) is the number of edges (which is one less than the number of nodes).
 
 ### Question 4
@@ -159,7 +161,7 @@ Given a graph $G$, a **subgraph** is a subset of nodes of $G$ along with their c
 
 ```{figure} matlab/egg_laying_circuit+subgraph.png
 ---
-height: 200px
+height: 300px
 name: egg-laying-circuit-subgraph
 ---
 The graph on the right is a subgraph of the graph on the left consisting of the nodes [3, 4, 7].
@@ -195,7 +197,7 @@ Two nodes are in the same **strongly connected component** of a directed graph i
 height: 200px
 name: egg-laying-circuit-scc
 ---
-The strongly connected components of the egg-laying circuit are $[1, 2], [3, 6, 7], [4] and [5]$.
+The strongly connected components of the egg-laying circuit are $[1, 2], [3, 6, 7], [4]$ and $[5]$.
  
 ```
 
@@ -214,7 +216,7 @@ Determine the strongly connected components of the digraph below.
 :align: center
 ```
 
-```{note} Info
+```{admonition} Info
 The algorithm described in the previous question is very inefficient. In practice, more efficient algorithms based on depth first search are used.
 ```
 
@@ -241,43 +243,36 @@ $$
 $$
 
 ### Question 2
-1. 
-```{image} matlab/question_2.png
+1. ```{image} matlab/question_2.png
 :alt: Answer question 2
 :height: 200px
 :align: left
-```
-1. 
-```{image} matlab/question_2.png
+1. ```{image} matlab/question_2.png
 :alt: Answer question 2
 :height: 200px
 :align: left
-```
-1. 
-```{image} matlab/question2.png
+1. ```{image} matlab/question2.png
 :alt: Answer question 2
 :height: 200px
 :align: left
-```
+
 
 ### Question 4
 
 1. There are 3 choices for the first node, and 2 choices for each of the 10 subsequent nodes. The total number of walks is therefore $3 × 2^10$.
-
 ```{image} matlab/K3.png
 :alt: Answer question 4
 :height: 200px
 :align: center
 ```
-
 1. Paths from node 6 to node 4: $[6,4],[6,7,4],[6,7,3,4],[6,7,3,5,4]$. Paths from node 4 to node 6: none.
 1. $[2,1,3,7,6,4]$.
 
 ### Question 6
 
-1. BFS starting at node 2:$[2,1,4,3,5,7,6]$
+1. BFS starting at node 2:$[2,1,4,3,5,7,6]$ <br>
 Path distances from node 2: $d = [1,0,2,1,3,4,3]$ where $d(i)$ is the distance from node $i$.
-1. BFS starting at node 6: $[6, 4, 7, 3, 5]$
+1. BFS starting at node 6: $[6, 4, 7, 3, 5]$ <br>
 Path distances from node 6: $d = [inf, inf, 2, 1, 3, 0, 1]$
 
 ### Question 7
@@ -288,14 +283,13 @@ Path distances from node 6: $d = [inf, inf, 2, 1, 3, 0, 1]$
 :height: 200px
 :align: center
 ```
-
-1. 
+2. 
 $$
 \begin{bmatrix}
 	0 & 1 & 1 & 0\\ 1 & 0 & 0 & 0\\ 0 & 0 & 0 & 0\\ 0 & 0 & 0 & 0
-\end{bmatrix}
+\end{bmatrix} for node order 1, 2, 3, 6
+
 $$
-for node order 1, 2, 3, 6
 
 ### Question 8
 Connected components: $[1, 5, 6, 7, 9], [4, 8], [2, 3, 10]$

@@ -403,9 +403,9 @@
 </div>
 <div class="section" id="walks-and-paths">
 <h2>Walks and Paths<a class="headerlink" href="#walks-and-paths" title="Permalink to this headline">¶</a></h2>
-<p>A <strong>walk</strong> in a graph is a sequence of nodes formed by following edges. A walk may visit the same node several times. For example, in the egg-laying graph <span class="math notranslate nohighlight">\([1, 3, 7, 6]\)</span> is a walk from node 1 to node 6, and <span class="math notranslate nohighlight">\([1,2,1,3]\)</span> is a walk from node 1 to node 3.
-A <strong>path</strong> is a walk which does not visit any node more than once. So <span class="math notranslate nohighlight">\([1, 3, 7, 6]\)</span> is a path but <span class="math notranslate nohighlight">\([1, 2, 1, 3]\)</span> is not.
-The <strong>length</strong> of a walk (or path) is the number of edges (which is one less than the number of nodes).</p>
+<p>A <strong>walk</strong> in a graph is a sequence of nodes formed by following edges. A walk may visit the same node several times. For example, in the egg-laying graph <span class="math notranslate nohighlight">\([1, 3, 7, 6]\)</span> is a walk from node 1 to node 6, and <span class="math notranslate nohighlight">\([1,2,1,3]\)</span> is a walk from node 1 to node 3.</p>
+<p>A <strong>path</strong> is a walk which does not visit any node more than once. So <span class="math notranslate nohighlight">\([1, 3, 7, 6]\)</span> is a path but <span class="math notranslate nohighlight">\([1, 2, 1, 3]\)</span> is not.</p>
+<p>The <strong>length</strong> of a walk (or path) is the number of edges (which is one less than the number of nodes).</p>
 <div class="section" id="question-4">
 <h3>Question 4<a class="headerlink" href="#question-4" title="Permalink to this headline">¶</a></h3>
 <ol class="simple">
@@ -455,7 +455,7 @@ The <strong>length</strong> of a walk (or path) is the number of edges (which is
 <h2>Subgraphs<a class="headerlink" href="#subgraphs" title="Permalink to this headline">¶</a></h2>
 <p>Given a graph <span class="math notranslate nohighlight">\(G\)</span>, a <strong>subgraph</strong> is a subset of nodes of <span class="math notranslate nohighlight">\(G\)</span> along with their corresponding edges.</p>
 <div class="figure align-default" id="egg-laying-circuit-subgraph">
-<a class="reference internal image-reference" href="ws1/matlab/egg_laying_circuit+subgraph.png"><img alt="ws1/matlab/egg_laying_circuit+subgraph.png" src="ws1/matlab/egg_laying_circuit+subgraph.png" style="height: 200px;" /></a>
+<a class="reference internal image-reference" href="../_images/egg_laying_circuit+subgraph.png"><img alt="../_images/egg_laying_circuit+subgraph.png" src="../_images/egg_laying_circuit+subgraph.png" style="height: 300px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 3 </span><span class="caption-text">The graph on the right is a subgraph of the graph on the left consisting of the nodes [3, 4, 7].</span><a class="headerlink" href="#egg-laying-circuit-subgraph" title="Permalink to this image">¶</a></p>
 </div>
 <div class="section" id="question-7">
@@ -485,7 +485,7 @@ The <strong>length</strong> of a walk (or path) is the number of edges (which is
 <p>Two nodes are in the same <strong>strongly connected component</strong> of a directed graph if and only if there is a path between them in both directions.</p>
 <div class="figure align-default" id="egg-laying-circuit-scc">
 <a class="reference internal image-reference" href="../_images/egg_laying_circuit_scc.jpg"><img alt="../_images/egg_laying_circuit_scc.jpg" src="../_images/egg_laying_circuit_scc.jpg" style="height: 200px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 4 </span><span class="caption-text">The strongly connected components of the egg-laying circuit are <span class="math notranslate nohighlight">\([1, 2], [3, 6, 7], [4] and [5]\)</span>.</span><a class="headerlink" href="#egg-laying-circuit-scc" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 4 </span><span class="caption-text">The strongly connected components of the egg-laying circuit are <span class="math notranslate nohighlight">\([1, 2], [3, 6, 7], [4]\)</span> and <span class="math notranslate nohighlight">\([5]\)</span>.</span><a class="headerlink" href="#egg-laying-circuit-scc" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 <div class="section" id="question-9">
@@ -497,10 +497,9 @@ The <strong>length</strong> of a walk (or path) is the number of edges (which is
 <li><p>Repeat from step 1, starting from any vertex not yet assigned to a strongly connected component.</p></li>
 </ol>
 <a class="reference internal image-reference" href="../_images/question_scc.png"><img alt="SCC question" class="align-center" src="../_images/question_scc.png" style="height: 200px;" /></a>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Info
-The algorithm described in the previous question is very inefficient. In practice, more efficient algorithms based on depth first search are used.</p>
+<div class="admonition-info admonition">
+<p class="admonition-title">Info</p>
+<p>The algorithm described in the previous question is very inefficient. In practice, more efficient algorithms based on depth first search are used.</p>
 </div>
 </div>
 <div class="section" id="question-10">
@@ -530,18 +529,27 @@ The algorithm described in the previous question is very inefficient. In practic
 </div>
 <div class="section" id="id3">
 <h3>Question 2<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
-<ol class="simple">
-<li></li>
+<ol>
+<li><img alt="../_images/question_2.png" src="../_images/question_2.png" />
+</li>
 </ol>
-<a class="reference internal image-reference" href="ws1/matlab/question_2.png"><img alt="Answer question 2" class="align-left" src="ws1/matlab/question_2.png" style="height: 200px;" /></a>
-<ol class="simple">
-<li></li>
+<p>:alt: Answer question 2
+:height: 200px
+:align: left</p>
+<ol>
+<li><img alt="../_images/question_2.png" src="../_images/question_2.png" />
+</li>
 </ol>
-<a class="reference internal image-reference" href="ws1/matlab/question_2.png"><img alt="Answer question 2" class="align-left" src="ws1/matlab/question_2.png" style="height: 200px;" /></a>
-<ol class="simple">
-<li></li>
+<p>:alt: Answer question 2
+:height: 200px
+:align: left</p>
+<ol>
+<li><img alt="../_images/question2.png" src="../_images/question2.png" />
+</li>
 </ol>
-<a class="reference internal image-reference" href="ws1/matlab/question2.png"><img alt="Answer question 2" class="align-left" src="ws1/matlab/question2.png" style="height: 200px;" /></a>
+<p>:alt: Answer question 2
+:height: 200px
+:align: left</p>
 </div>
 <div class="section" id="id4">
 <h3>Question 4<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
@@ -557,9 +565,9 @@ The algorithm described in the previous question is very inefficient. In practic
 <div class="section" id="id5">
 <h3>Question 6<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
 <ol class="simple">
-<li><p>BFS starting at node 2:<span class="math notranslate nohighlight">\([2,1,4,3,5,7,6]\)</span>
+<li><p>BFS starting at node 2:<span class="math notranslate nohighlight">\([2,1,4,3,5,7,6]\)</span> <br>
 Path distances from node 2: <span class="math notranslate nohighlight">\(d = [1,0,2,1,3,4,3]\)</span> where <span class="math notranslate nohighlight">\(d(i)\)</span> is the distance from node <span class="math notranslate nohighlight">\(i\)</span>.</p></li>
-<li><p>BFS starting at node 6: <span class="math notranslate nohighlight">\([6, 4, 7, 3, 5]\)</span>
+<li><p>BFS starting at node 6: <span class="math notranslate nohighlight">\([6, 4, 7, 3, 5]\)</span> <br>
 Path distances from node 6: <span class="math notranslate nohighlight">\(d = [inf, inf, 2, 1, 3, 0, 1]\)</span></p></li>
 </ol>
 </div>
@@ -576,9 +584,7 @@ Path distances from node 6: <span class="math notranslate nohighlight">\(d = [in
 \[\begin{split}
 \begin{bmatrix}
 	0 &amp; 1 &amp; 1 &amp; 0\\ 1 &amp; 0 &amp; 0 &amp; 0\\ 0 &amp; 0 &amp; 0 &amp; 0\\ 0 &amp; 0 &amp; 0 &amp; 0
-\end{bmatrix}
-\end{split}\]</div>
-<p>for node order 1, 2, 3, 6</p>
+\end{bmatrix} for node order 1, 2, 3, 6\end{split}\]</div>
 </div>
 <div class="section" id="id7">
 <h3>Question 8<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h3>
