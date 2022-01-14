@@ -1,3 +1,17 @@
+---
+jupytext:
+  formats: md:myst
+  text_representation:
+    extension: .md
+    format_name: myst
+    format_version: 0.13
+    jupytext_version: 1.10.3
+kernelspec:
+  display_name: Python 3
+  language: python
+  name: python3
+---
+
 # Manipulating graphs with Python
 
 Python has many functions for manipulating and investigating graphs.
@@ -12,7 +26,6 @@ import networkx as nx
 Create directed graph from edge list or adjacency matrix
 
 ``` python
-:tags: ["remove-output"]
 # Use here the class DiGraph from module networkx for directed graphs:
 G = nx.DiGraph()
 # For graph from adjacency matrix use the function:
@@ -22,8 +35,6 @@ G.add_edges_from('edge list inputted here')
 ```
 Create undirected graphs
 ``` python
-:tags: ["remove-output"]
-
 # Similarly to directed graphs, first initialise an undirected graph:
 G = nx.Graph()
 # Using an adjacency matrix:
@@ -34,7 +45,6 @@ G.add_edges_from('edge list inputted here')
 
 Get number of nodes and edges
 ``` python
-:tags: ["remove-output"]
 
 G.number_of_edges() # either returns the number of edges between two nodes if specified or the total number of edges
 G.number_of_nodes() # returns number of nodes
@@ -42,20 +52,17 @@ G.number_of_nodes() # returns number of nodes
 
 Remove loops and multiple edges
 ```python
-:tags: ["remove-output"]
-
 G.simplify()
 G.is_simple() # checks if the graph is simple
 ```
 
 Create a subgraph
 ```python
-:tags: ["remove-output"]
-
 G.subgraph('nodes inputted here')
 ```
 
 Perform breadth first search
+
 There is no in-built function in python but it is relatively straight forward to create your own (see hidden code).
 ```{code-cell} ipython3
 ---
@@ -160,9 +167,9 @@ plt.show()
 1. Use Python to:
     1. Create and plot your graph.
     1. Colour the nodes according to their strongly connected component.
-    1. Determine the pair of nodes i, j with the greatest path distance. Hint: use the following code to find the maximum element of matrix d. **TBC**
-        *d = nx.all_pairs_shortest_path(G)*
-        *m = max(d)*
+    1. Determine the pair of nodes i, j with the greatest path distance. Hint: use the following code to find the maximum element of matrix d. **TBC** <br>
+        *d = nx.all_pairs_shortest_path(G)* <br>
+        *m = max(d)* <br>
         *i,j = np.where(d==m)* 
     1. Determine the shortest path between i and j and increase the width of its edges to 2 points.
 
