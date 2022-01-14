@@ -5,3 +5,4 @@ format: jb-book
 root: intro.md
 chapters:
 - file: ws1/ws1.md
+- file: ws2.md
