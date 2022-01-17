@@ -66,7 +66,7 @@ Perform breadth first search
 There is no in-built function in python but it is relatively straight forward to create your own (see hidden code).
 ```{code-cell} ipython3
 ---
-tags=  [hide-input]
+tags: [hide-input]
 ---
 
 # Where M is the adjacency matrix and i the starting node of the search
