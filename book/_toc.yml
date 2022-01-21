@@ -3,6 +3,9 @@
 
 format: jb-book
 root: intro
+options:
+  numbered: true
 chapters:
-- file: ws1.md
-- file: ws2.ipynb
+- file: ws1/ws1.md
+- file: ws2/ws2.ipynb
+# - file: nc_problems.ipynb

@@ -18,8 +18,8 @@ A **graph** is a collection of **nodes** (or **vertices**) connected by **edges*
 
 ```{figure} matlab/egg_laying_circuit.png
 ---
-height: 200px
-name: egg-laying-circuit
+:height: 200px
+:name: egg-laying-circuit
 ---
 Directed graph of the egg-laying circuit of C-Elegans.
 ```
@@ -144,9 +144,17 @@ Determine the path distance between node 1 and every other vertex in the egg-lay
 :height: 200px
 :align: center
 ```
-> The previous question should have given you an intuition about how to build an algorithm which calculates the shortest path between the starting node and every other node. In the next section we explore this technique.
+
+## Graph Properties
+In this section we will study some properties properties of directed graphs which we can use to compare brain circuits. For a more detailed explanation of these definitions, see [1].
+
+The **indegree** and **outdegree** of a node is defined as the number of incoming and outgoing connections respectively. By calculating the histogram of node degrees, we arrive at the **degree distribution** of the graph (see Figure 1).
+
+The **distance matrix** of a directed graph is the matrix [$d_{ij}$] where $d_{ij}$ is the path distance from node $i$ to node $j$. If $i=j$ then $d_{ij} =0$, and if $i$ and $j$ are not connected then $d_{ij}$ is infinite. The **average path length** is the mean of the finite off-diagonal elements of the distance matrix.
 
 ## Breadth First Search
+
+Question 5 should have given you an intuition about how to build an algorithm which calculates the shortest path between the starting node and every other node. In the next section we explore this technique.
 
 A search algorithm is a method of traversing a graph by following edges. In **breadth first search** (BFS), we start at the origin node and traverse the graph in levels, increasing the distance from the origin one level at a time.
 

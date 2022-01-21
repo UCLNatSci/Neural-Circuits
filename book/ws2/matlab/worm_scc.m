@@ -1,0 +1,1 @@
+[bin, binsize] = conncomp(J);

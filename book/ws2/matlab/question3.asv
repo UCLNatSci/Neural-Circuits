@@ -1,0 +1,8 @@
+% Determine the (weakly - connected )
+% components of G
+[bin , binsize ] = conncomp (G,'Type ','weak ');
+idx = ( binsize (bin) == max( binsize ));
+H = subgraph (G, idx );
+plot (H);
+
+idx = (binsize(bin)
