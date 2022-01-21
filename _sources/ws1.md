@@ -18,8 +18,8 @@ A **graph** is a collection of **nodes** (or **vertices**) connected by **edges*
 
 ```{figure} matlab/egg_laying_circuit.png
 ---
-height: 200px
-name: egg-laying-circuit
+:height: 200px
+:name: egg-laying-circuit
 ---
 Directed graph of the egg-laying circuit of C-Elegans.
 ```
