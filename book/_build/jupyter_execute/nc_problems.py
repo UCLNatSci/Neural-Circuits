@@ -124,13 +124,15 @@ def rewire_graph(G, p):
 
 # ### Question 6
 # 
-# Create a figure which shows how average path length and global clustering co-efficient vary with rewiring probability. Experiment with different values of `N` and `k`. For what values of `p` does the resulting graph have small-world properties? Can you reproduce the figure from {cite}`watts1998collective`?
+# Create a figure which shows how average path length and global clustering co-efficient vary with rewiring probability. Experiment with different values of `N` and `k`. For what values of `p` does the resulting graph have small-world properties? Can you reproduce Figure 2 in {cite}`watts1998collective`?
 
 # ### Question 7 [Open-ended]
 # 
 # How did Watts and Strogatz determine the small-worldness of the graph of the *C-Elegans* nervous system?
 # 
 # Import the graph of the *C Elegans* nervous system into Python and see if you can reproduce the values in Table 1 of {cite}`watts1998collective`.
+# 
+# <a href="herm_full_edgelist.csv" download>Download C Elegans Nervous System Data</a>  
 
 # ## References
 # 
