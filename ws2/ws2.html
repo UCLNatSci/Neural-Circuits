@@ -42,6 +42,8 @@
     <script src="../_static/copybutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script>
         const thebe_selector = ".thebe"
@@ -51,6 +53,7 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="3. Small-World Networks" href="../nc_problems.html" />
     <link rel="prev" title="1. Graphs" href="../ws1/ws1.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -104,6 +107,11 @@
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
    2. Graphs with Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../nc_problems.html">
+   3. Small-World Networks
   </a>
  </li>
 </ul>
@@ -182,6 +190,11 @@
    2.1. Question 1
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#question-2">
+   2.2. Question 2
+  </a>
+ </li>
 </ul>
 
             </nav>
@@ -242,6 +255,15 @@ ways to create a graph representing a directed 3-cycle.</p>
 <h2><span class="section-number">2.1. </span>Question 1<a class="headerlink" href="#question-1" title="Permalink to this headline">¶</a></h2>
 <p>Use NetworkX to plot a <em>directed</em> graph of the <a class="reference internal" href="../ws1/ws1.html#egg-laying-circuit"><span class="std std-ref">egg-laying circuit</span></a>.</p>
 </div>
+<div class="section" id="question-2">
+<h2><span class="section-number">2.2. </span>Question 2<a class="headerlink" href="#question-2" title="Permalink to this headline">¶</a></h2>
+<p>A (Erdos-Renyi) random graph <span class="math notranslate nohighlight">\(G_{N,p}\)</span> is an undirected graph with <span class="math notranslate nohighlight">\(N\)</span> nodes where the probability of an edge between any two nodes is <span class="math notranslate nohighlight">\(p\)</span>.</p>
+<ol class="simple">
+<li><p>Use NetworkX to estimate the global clustering coefficient and average path length of <span class="math notranslate nohighlight">\(G_{10,0.5}\)</span>.</p></li>
+<li><p>Write a function which returns an undirected random graph with <span class="math notranslate nohighlight">\(N\)</span> nodes and expected (average) node degree <span class="math notranslate nohighlight">\(k\)</span>.</p></li>
+<li><p>For fixed average node degree <span class="math notranslate nohighlight">\(k\)</span>, how does average path length and global clustering vary with graph size? Choose a value of <span class="math notranslate nohighlight">\(k\)</span>, and plot average path length against <span class="math notranslate nohighlight">\(N\)</span> and global clustering against <span class="math notranslate nohighlight">\(N\)</span>. Describe what you find.</p></li>
+</ol>
+</div>
 </div>
 
     <script type="text/x-thebe-config">
@@ -275,6 +297,13 @@ ways to create a graph representing a directed 3-cycle.</p>
             <p class="prev-next-subtitle">previous</p>
             <p class="prev-next-title"><span class="section-number">1. </span>Graphs</p>
         </div>
+    </a>
+    <a class='right-next' id="next-link" href="../nc_problems.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">3. </span>Small-World Networks</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
     </a>
 </div>
         
