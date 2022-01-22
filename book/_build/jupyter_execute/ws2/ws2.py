@@ -46,3 +46,13 @@ nx.draw(G2)
 # ### Question 1
 # 
 # Use NetworkX to plot a *directed* graph of the [egg-laying circuit](egg-laying-circuit).
+# 
+# ### Question 2
+# 
+# A (Erdos-Renyi) random graph $G_{N,p}$ is an undirected graph with $N$ nodes where the probability of an edge between any two nodes is $p$.
+# 
+# 1. Use NetworkX to estimate the global clustering coefficient and average path length of $G_{10,0.5}$.
+# 2. Write a function which returns an undirected random graph with $N$ nodes and expected (average) node degree $k$.
+# 2. For fixed average node degree $k$, how does average path length and global clustering vary with graph size? Choose a value of $k$, and plot average path length against $N$ and global clustering against $N$. Describe what you find.
+# 
+# 

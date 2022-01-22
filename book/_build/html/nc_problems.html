@@ -185,28 +185,55 @@
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#question-1">
-   3.1. Question 1
+  <a class="reference internal nav-link" href="#introduction">
+   3.1. Introduction
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#question-2">
-   3.2. Question 2
+  <a class="reference internal nav-link" href="#questions">
+   3.2. Questions
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#question-1">
+     3.2.1. Question 1
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#question-2">
+     3.2.2. Question 2
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#question-3">
+     3.2.3. Question 3
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#question-4">
+     3.2.4. Question 4
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#question-5">
+     3.2.5. Question 5
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#question-6">
+     3.2.6. Question 6
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#question-7-open-ended">
+     3.2.7. Question 7 [Open-ended]
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#question-3">
-   3.3. Question 3
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#question-4">
-   3.4. Question 4
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#question-5">
-   3.5. Question 5
+  <a class="reference internal nav-link" href="#references">
+   3.3. References
   </a>
  </li>
 </ul>
@@ -222,15 +249,27 @@
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="small-world-networks">
 <h1><span class="section-number">3. </span>Small-World Networks<a class="headerlink" href="#small-world-networks" title="Permalink to this headline">¶</a></h1>
-<p>This worksheet explores the formation of networks that result in the “small world” phenomenon - the idea that a person is only a couple of connections away from any other person in the world.</p>
-<p>A popular example of the small world phenomenon is the network formed by actors appearing in the same movie (e.g., “Six Degrees of Kevin Bacon”), but small worlds are not limited to people-only networks. Other examples range from power grids to the neural networks of worms. This model illustrates some general, theoretical conditions under which small world networks between people or things might occur.</p>
-<p>This model is an adaptation of the Watts-Strogatz model proposed by Duncan Watts and Steve Strogatz (1998). It begins with a <em>ring lattice</em> network where each node is connected to <span class="math notranslate nohighlight">\(k\)</span> neighbours on either side. Using this a base, we then modify the network by rewiring edges – removing an edge from the graph and replacing it with an edge between two nodes sampled at random. Over time, we analyse the effect this rewiring has the on various connections between nodes and on the properties of the network.</p>
-<p>Particularly, we’re interested in identifying “small worlds.” To identify small worlds, the <em>average path length</em> and <em>clustering coefficient</em> of the network are calculated and plotted after a rewiring is performed. Networks with short average path lengths and high clustering coefficients are considered small world networks.</p>
-<p><img alt="" src="watts_strogatz.png" /></p>
-<p>Lattice graphs have high clustering coefficients and high average path lengths, whereas random graphs have low clustering coefficients and small average path lengths.</p>
-<p>Watts and Strogatz <span id="id1">[]</span> realised that by ‘rewiring’ a small number of edges in a lattice graph, the average path length decreases sharply, but clustering coefficients remain high. This property of short path distances and high clustering characterises a ‘small world’ graph.</p>
-<p>In the following question you will write a script which performs the Watts-Strogatz small world simulation with directed graphs.</p>
-<p>Let <span class="math notranslate nohighlight">\(L_{N,k}\)</span> be the undirected ring lattice graph with <span class="math notranslate nohighlight">\(N\)</span> nodes each connected to its <span class="math notranslate nohighlight">\(k\)</span> closest neighbours.</p>
+<div class="section" id="introduction">
+<h2><span class="section-number">3.1. </span>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<p>This worksheet explores the formation of networks that result in the “small world” phenomenon. A popular example of the small world phenomenon is the network formed by actors appearing in the same movie (e.g., “Six Degrees of Kevin Bacon”), but small worlds are not limited to people-only networks. Other examples range from power grids to the neural networks of worms. This model illustrates some general, theoretical conditions under which small world networks between people or things might occur.</p>
+<p>This model is an adaptation of the Watts-Strogatz model proposed by Duncan Watts and Steve Strogatz <span id="id1">[<a class="reference internal" href="#id5">1</a>]</span>, whose definition of small-worldness stipulates significant local clustering as well as small path lengths. It begins with a <em>ring lattice</em> network where each node is connected to <span class="math notranslate nohighlight">\(k\)</span> neighbours on either side. Using this as a starting point, we then modify the network by rewiring edges – removing an edge from the graph and replacing it with an edge between two nodes sampled at random. Over time, we analyse the effect this rewiring has the on various connections between nodes and on the properties of the network. Watts and Strogatz realised that by ‘rewiring’ a small number of edges in a lattice graph, the average path length decreases sharply, but clustering coefficients remain high. This property of short path distances and high clustering characterises a ‘small world’ graph.</p>
+<a class="reference internal image-reference" href="_images/watts_strogatz.png"><img alt="L(12, 2)" class="align-center" src="_images/watts_strogatz.png" style="width: 400px;" /></a>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This worksheets sets out a structured way to reproduce the results similar to Watts and Strogatz (1998). You are encouraged experiment and deviate from this worksheet in any way you see fit.</p>
+</div>
+</div>
+<div class="section" id="questions">
+<h2><span class="section-number">3.2. </span>Questions<a class="headerlink" href="#questions" title="Permalink to this headline">¶</a></h2>
+<p>We will use Python and NetworkX to perform the simulation. To start, we need the definition of a <em>ring lattice</em>.</p>
+<div class="admonition-definition-ring-lattice admonition">
+<p class="admonition-title">Definition: Ring Lattice</p>
+<p>A <strong>ring lattice</strong> <span class="math notranslate nohighlight">\(L_{N,k}\)</span> is a graph consisting of <span class="math notranslate nohighlight">\(N\)</span> nodes arranged in a ring such that each node is
+connected to each of its <span class="math notranslate nohighlight">\(k\)</span> closest neighbours on either side.</p>
+<p>Below is <span class="math notranslate nohighlight">\(L(12, 2)\)</span>:</p>
+<a class="reference internal image-reference" href="_images/ring_lattice.jfif"><img alt="L(12, 2)" class="align-center" src="_images/ring_lattice.jfif" style="width: 150px;" /></a>
+</div>
+<p>We will also need to import the required libraries.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -241,7 +280,12 @@
 </div>
 </div>
 <div class="section" id="question-1">
-<h2><span class="section-number">3.1. </span>Question 1<a class="headerlink" href="#question-1" title="Permalink to this headline">¶</a></h2>
+<h3><span class="section-number">3.2.1. </span>Question 1<a class="headerlink" href="#question-1" title="Permalink to this headline">¶</a></h3>
+<p><em>Answer this by hand</em>.</p>
+<p>Calculate the global clustering coefficient and <em>approximate</em> shortest path length of <span class="math notranslate nohighlight">\(L(N, k)\)</span>.</p>
+</div>
+<div class="section" id="question-2">
+<h3><span class="section-number">3.2.2. </span>Question 2<a class="headerlink" href="#question-2" title="Permalink to this headline">¶</a></h3>
 <p>Write a function <code class="docutils literal notranslate"><span class="pre">get_lattice(N,</span> <span class="pre">k)</span></code> which returns an undirected ring lattice <span class="math notranslate nohighlight">\(L_{N,k}\)</span> with <span class="math notranslate nohighlight">\(N\)</span> nodes each connected to its <span class="math notranslate nohighlight">\(k\)</span> closest neighbours.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -252,42 +296,57 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/nc_problems_4_0.png" src="_images/nc_problems_4_0.png" />
+<img alt="_images/nc_problems_6_0.png" src="_images/nc_problems_6_0.png" />
 </div>
 </div>
 </div>
-<div class="section" id="question-2">
-<h2><span class="section-number">3.2. </span>Question 2<a class="headerlink" href="#question-2" title="Permalink to this headline">¶</a></h2>
-<p>Write a function <code class="docutils literal notranslate"><span class="pre">rewire_edge(G,</span> <span class="pre">i,</span> <span class="pre">j)</span></code> which randomly rewires the start and end nodes of edge i of graph G. The function should remove the edge connecting nodes <code class="docutils literal notranslate"><span class="pre">i</span></code> and <code class="docutils literal notranslate"><span class="pre">j</span></code> then add a new edge connecting a <em>distinct</em> pair of random nodes.</p>
+<div class="section" id="question-3">
+<h3><span class="section-number">3.2.3. </span>Question 3<a class="headerlink" href="#question-3" title="Permalink to this headline">¶</a></h3>
+<p>Write a function <code class="docutils literal notranslate"><span class="pre">rewire_edge(G,</span> <span class="pre">i,</span> <span class="pre">j)</span></code> which randomly rewires the start and end nodes of the edge connected nodes <code class="docutils literal notranslate"><span class="pre">i</span></code> and <code class="docutils literal notranslate"><span class="pre">j</span></code> of graph <code class="docutils literal notranslate"><span class="pre">G</span></code>. The function should remove the edge connecting nodes <code class="docutils literal notranslate"><span class="pre">i</span></code> and <code class="docutils literal notranslate"><span class="pre">j</span></code> then add a new edge connecting a <em>distinct</em> pair of random nodes.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">G</span> <span class="o">=</span> <span class="n">get_lattice</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">),</span> <span class="n">dpi</span><span class="o">=</span><span class="mi">25</span><span class="p">)</span>
 <span class="n">nx</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">with_labels</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 
 <span class="n">rewire_edge</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">),</span> <span class="n">dpi</span><span class="o">=</span><span class="mi">25</span><span class="p">)</span>
 <span class="n">nx</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">with_labels</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/nc_problems_7_0.png" src="_images/nc_problems_7_0.png" />
-<img alt="_images/nc_problems_7_1.png" src="_images/nc_problems_7_1.png" />
+<img alt="_images/nc_problems_9_0.png" src="_images/nc_problems_9_0.png" />
+<img alt="_images/nc_problems_9_1.png" src="_images/nc_problems_9_1.png" />
 </div>
 </div>
-</div>
-<div class="section" id="question-3">
-<h2><span class="section-number">3.3. </span>Question 3<a class="headerlink" href="#question-3" title="Permalink to this headline">¶</a></h2>
-<p>Write a function <code class="docutils literal notranslate"><span class="pre">rewire_graph(G,</span> <span class="pre">p)</span></code> which loops over all edges of graph <code class="docutils literal notranslate"><span class="pre">G</span></code>, rewiring each one with probability <code class="docutils literal notranslate"><span class="pre">p</span></code>.</p>
 </div>
 <div class="section" id="question-4">
-<h2><span class="section-number">3.4. </span>Question 4<a class="headerlink" href="#question-4" title="Permalink to this headline">¶</a></h2>
-<p>Choosing suitable values for <code class="docutils literal notranslate"><span class="pre">N</span></code> and <code class="docutils literal notranslate"><span class="pre">k</span></code>, write a script that generates a ring lattice graph, rewires the graph with given rewiring probability <code class="docutils literal notranslate"><span class="pre">p</span></code>, then calculates the average path length and global clustering coefficient. Amend your code so that <code class="docutils literal notranslate"><span class="pre">p</span></code> varies from <code class="docutils literal notranslate"><span class="pre">0</span></code> to <code class="docutils literal notranslate"><span class="pre">1</span></code>, and create arrays to store the average path length and global clustering coefficient for each value of <code class="docutils literal notranslate"><span class="pre">p</span></code>.</p>
+<h3><span class="section-number">3.2.4. </span>Question 4<a class="headerlink" href="#question-4" title="Permalink to this headline">¶</a></h3>
+<p>Write a function <code class="docutils literal notranslate"><span class="pre">rewire_graph(G,</span> <span class="pre">p)</span></code> which loops over all edges of graph <code class="docutils literal notranslate"><span class="pre">G</span></code>, rewiring each one with probability <code class="docutils literal notranslate"><span class="pre">p</span></code>.</p>
 </div>
 <div class="section" id="question-5">
-<h2><span class="section-number">3.5. </span>Question 5<a class="headerlink" href="#question-5" title="Permalink to this headline">¶</a></h2>
-<p>Create a figure which shows how average path length and global clustering co-efficient vary with rewiring probability. Experiment with different values of <code class="docutils literal notranslate"><span class="pre">N</span></code> and <code class="docutils literal notranslate"><span class="pre">k</span></code>. For what values of <code class="docutils literal notranslate"><span class="pre">p</span></code> does the resulting graph have small-world properties? Can you reproduce the figure from <span id="id2">[]</span>.</p>
+<h3><span class="section-number">3.2.5. </span>Question 5<a class="headerlink" href="#question-5" title="Permalink to this headline">¶</a></h3>
+<p>Choosing suitable values for <code class="docutils literal notranslate"><span class="pre">N</span></code> and <code class="docutils literal notranslate"><span class="pre">k</span></code>, write a script that generates a ring lattice graph, rewires the graph with given rewiring probability <code class="docutils literal notranslate"><span class="pre">p</span></code>, then calculates the average path length and global clustering coefficient. Amend your code so that <code class="docutils literal notranslate"><span class="pre">p</span></code> varies from <code class="docutils literal notranslate"><span class="pre">0</span></code> to <code class="docutils literal notranslate"><span class="pre">1</span></code>, and create arrays to store the average path length and global clustering coefficient for each value of <code class="docutils literal notranslate"><span class="pre">p</span></code>.</p>
+</div>
+<div class="section" id="question-6">
+<h3><span class="section-number">3.2.6. </span>Question 6<a class="headerlink" href="#question-6" title="Permalink to this headline">¶</a></h3>
+<p>Create a figure which shows how average path length and global clustering co-efficient vary with rewiring probability. Experiment with different values of <code class="docutils literal notranslate"><span class="pre">N</span></code> and <code class="docutils literal notranslate"><span class="pre">k</span></code>. For what values of <code class="docutils literal notranslate"><span class="pre">p</span></code> does the resulting graph have small-world properties? Can you reproduce the figure from <span id="id2">[<a class="reference internal" href="#id5">1</a>]</span>?</p>
+</div>
+<div class="section" id="question-7-open-ended">
+<h3><span class="section-number">3.2.7. </span>Question 7 [Open-ended]<a class="headerlink" href="#question-7-open-ended" title="Permalink to this headline">¶</a></h3>
+<p>How did Watts and Strogatz determine the small-worldness of the graph of the <em>C-Elegans</em> nervous system?</p>
+<p>Import the graph of the <em>C Elegans</em> nervous system into Python and see if you can reproduce the values in Table 1 of <span id="id3">[<a class="reference internal" href="#id5">1</a>]</span>.</p>
+</div>
+</div>
+<div class="section" id="references">
+<h2><span class="section-number">3.3. </span>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
+<p id="id4"><dl class="citation">
+<dt class="label" id="id5"><span class="brackets">1</span><span class="fn-backref">(<a href="#id1">1</a>,<a href="#id2">2</a>,<a href="#id3">3</a>)</span></dt>
+<dd><p>Duncan J Watts and Steven H Strogatz. Collective dynamics of ‘small-world’ networks. <em>nature</em>, 393(6684):440–442, 1998.</p>
+</dd>
+</dl>
+</p>
 </div>
 </div>
 

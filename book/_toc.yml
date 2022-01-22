@@ -8,4 +8,4 @@ options:
 chapters:
 - file: ws1/ws1.md
 - file: ws2/ws2.ipynb
-# - file: nc_problems.ipynb
+- file: nc_problems.ipynb
