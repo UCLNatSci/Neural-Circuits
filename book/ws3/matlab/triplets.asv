@@ -1,0 +1,3 @@
+function result = triplets(G)
+    
+end function

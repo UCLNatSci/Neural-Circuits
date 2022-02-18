@@ -1,0 +1,12 @@
+function result = sub_iso(G1, G2)
+    n = G1.numnodes;
+    k = G2.numnodes;
+    result = [];
+    combinations = nchoosek([1:n], k);
+    % iterate through ROWs of v 
+    % (need to transpose using ')
+    for v=combinations';
+        
+    end
+    
+end
