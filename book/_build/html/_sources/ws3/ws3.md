@@ -1,6 +1,5 @@
 # Further Graphs
 
-=(isomorphic_graphs)
 ## Isomorphic Graphs
 
 We say that two graphs are *isomorphic* if they have the same network structure. Graphs $G_1$ and $G_2$ are isomorphic if there exists a matching between their nodes such that two nodes are connected by an edge in $G_1$ if and only if their corresponding nodes are connected by an edge in $G_2$.

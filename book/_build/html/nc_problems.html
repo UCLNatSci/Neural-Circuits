@@ -53,7 +53,7 @@
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="4. NSCI0011 Coursework - Neural Circuits" href="project/neural_circuits_project.html" />
+    <link rel="next" title="4. Further Graphs" href="ws3/ws3.html" />
     <link rel="prev" title="2. Graphs with Python" href="ws2/ws2.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -115,8 +115,8 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="project/neural_circuits_project.html">
-   4. NSCI0011 Coursework - Neural Circuits
+  <a class="reference internal" href="ws3/ws3.html">
+   4. Further Graphs
   </a>
  </li>
 </ul>
@@ -328,7 +328,7 @@
 <div class="section" id="introduction">
 <h2><span class="section-number">3.1. </span>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
 <p>This worksheet explores the formation of networks that result in the “small world” phenomenon. A popular example of the small world phenomenon is the network formed by actors appearing in the same movie (e.g., “Six Degrees of Kevin Bacon”), but small worlds are not limited to people-only networks. Other examples range from power grids to the neural networks of worms. This model illustrates some general, theoretical conditions under which small world networks between people or things might occur.</p>
-<p>This model is an adaptation of the Watts-Strogatz model proposed by Duncan Watts and Steve Strogatz <span id="id1">[<a class="reference internal" href="project/neural_circuits_project.html#id8">2</a>]</span>, whose definition of small-worldness stipulates significant local clustering as well as small path lengths. It begins with a <em>ring lattice</em> network where each node is connected to <span class="math notranslate nohighlight">\(k\)</span> neighbours on either side. Using this as a starting point, we then modify the network by rewiring edges – removing an edge from the graph and replacing it with an edge between two nodes sampled at random. Over time, we analyse the effect this rewiring has the on various connections between nodes and on the properties of the network. Watts and Strogatz realised that by ‘rewiring’ a small number of edges in a lattice graph, the average path length decreases sharply, but clustering coefficients remain high. This property of short path distances and high clustering characterises a ‘small world’ graph.</p>
+<p>This model is an adaptation of the Watts-Strogatz model proposed by Duncan Watts and Steve Strogatz <span id="id1">[<a class="reference internal" href="#id5">1</a>]</span>, whose definition of small-worldness stipulates significant local clustering as well as small path lengths. It begins with a <em>ring lattice</em> network where each node is connected to <span class="math notranslate nohighlight">\(k\)</span> neighbours on either side. Using this as a starting point, we then modify the network by rewiring edges – removing an edge from the graph and replacing it with an edge between two nodes sampled at random. Over time, we analyse the effect this rewiring has the on various connections between nodes and on the properties of the network. Watts and Strogatz realised that by ‘rewiring’ a small number of edges in a lattice graph, the average path length decreases sharply, but clustering coefficients remain high. This property of short path distances and high clustering characterises a ‘small world’ graph.</p>
 <a class="reference internal image-reference" href="_images/watts_strogatz.png"><img alt="L(12, 2)" class="align-center" src="_images/watts_strogatz.png" style="width: 400px;" /></a>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -407,26 +407,20 @@ connected to each of its <span class="math notranslate nohighlight">\(k\)</span>
 </div>
 <div class="section" id="question-6">
 <h3><span class="section-number">3.2.6. </span>Question 6<a class="headerlink" href="#question-6" title="Permalink to this headline">¶</a></h3>
-<p>Create a figure which shows how average path length and global clustering co-efficient vary with rewiring probability. Experiment with different values of <code class="docutils literal notranslate"><span class="pre">N</span></code> and <code class="docutils literal notranslate"><span class="pre">k</span></code>. For what values of <code class="docutils literal notranslate"><span class="pre">p</span></code> does the resulting graph have small-world properties? Can you reproduce Figure 2 in <span id="id2">[<a class="reference internal" href="project/neural_circuits_project.html#id8">2</a>]</span>?</p>
+<p>Create a figure which shows how average path length and global clustering co-efficient vary with rewiring probability. Experiment with different values of <code class="docutils literal notranslate"><span class="pre">N</span></code> and <code class="docutils literal notranslate"><span class="pre">k</span></code>. For what values of <code class="docutils literal notranslate"><span class="pre">p</span></code> does the resulting graph have small-world properties? Can you reproduce Figure 2 in <span id="id2">[<a class="reference internal" href="#id5">1</a>]</span>?</p>
 </div>
 <div class="section" id="question-7-open-ended">
 <h3><span class="section-number">3.2.7. </span>Question 7 [Open-ended]<a class="headerlink" href="#question-7-open-ended" title="Permalink to this headline">¶</a></h3>
 <p>How did Watts and Strogatz determine the small-worldness of the graph of the <em>C-Elegans</em> nervous system?</p>
-<p>Import the graph of the <em>C Elegans</em> nervous system into Python and see if you can reproduce the values in Table 1 of <span id="id3">[<a class="reference internal" href="project/neural_circuits_project.html#id8">2</a>]</span>.</p>
+<p>Import the graph of the <em>C Elegans</em> nervous system into Python and see if you can reproduce the values in Table 1 of <span id="id3">[<a class="reference internal" href="#id5">1</a>]</span>.</p>
 <p><a href="herm_full_edgelist.csv" download>Download C Elegans Nervous System Data</a></p>
 </div>
 </div>
 <div class="section" id="references">
 <h2><span class="section-number">3.3. </span>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
 <p id="id4"><dl class="citation">
-<dt class="label" id="id6"><span class="brackets">1</span></dt>
-<dd><p>Olaf Sporns and Rolf Kötter. Motifs in brain networks. <em>PLoS biology</em>, 2(11):e369, 2004.</p>
-</dd>
-<dt class="label" id="id5"><span class="brackets">2</span><span class="fn-backref">(<a href="#id1">1</a>,<a href="#id2">2</a>,<a href="#id3">3</a>)</span></dt>
+<dt class="label" id="id5"><span class="brackets">1</span><span class="fn-backref">(<a href="#id1">1</a>,<a href="#id2">2</a>,<a href="#id3">3</a>)</span></dt>
 <dd><p>Duncan J Watts and Steven H Strogatz. Collective dynamics of ‘small-world’ networks. <em>nature</em>, 393(6684):440–442, 1998.</p>
-</dd>
-<dt class="label" id="id7"><span class="brackets">3</span></dt>
-<dd><p>C Shan Xu, Michal Januszewski, Zhiyuan Lu, Shin-ya Takemura, Kenneth J Hayworth, Gary Huang, Kazunori Shinomiya, Jeremy Maitin-Shepard, David Ackerman, Stuart Berg, and others. A connectome of the adult drosophila central brain. <em>BioRxiv</em>, 2020.</p>
 </dd>
 </dl>
 </p>
@@ -465,10 +459,10 @@ connected to each of its <span class="math notranslate nohighlight">\(k\)</span>
             <p class="prev-next-title"><span class="section-number">2. </span>Graphs with Python</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="project/neural_circuits_project.html" title="next page">
+    <a class='right-next' id="next-link" href="ws3/ws3.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">4. </span>NSCI0011 Coursework - Neural Circuits</p>
+        <p class="prev-next-title"><span class="section-number">4. </span>Further Graphs</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

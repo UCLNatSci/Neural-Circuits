@@ -42,6 +42,8 @@
     <script src="_static/copybutton.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"processClass": "tex2jax_process|mathjax_process|math|output_area"}})</script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
@@ -107,7 +109,7 @@
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>NSCI0011 Coursework - Neural Circuits</h1>
+                <h1>NSCI0011: Motif Analysis of Neural Circuits</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -118,39 +120,54 @@
             
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="nsci0011-coursework-neural-circuits">
-<h1>NSCI0011 Coursework - Neural Circuits<a class="headerlink" href="#nsci0011-coursework-neural-circuits" title="Permalink to this headline">¶</a></h1>
+  <div class="tex2jax_ignore mathjax_ignore section" id="nsci0011-motif-analysis-of-neural-circuits">
+<h1>NSCI0011: Motif Analysis of Neural Circuits<a class="headerlink" href="#nsci0011-motif-analysis-of-neural-circuits" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="background">
 <h2>Background<a class="headerlink" href="#background" title="Permalink to this headline">¶</a></h2>
-<p>A motif is a subgraph with a particular topological structure; for example, there are 13 possible motifs consisting of 3 nodes (see <a class="reference internal" href="#motifs"><span class="std std-numref">Fig. 1</span></a>). The aim of motif analysis is to determine which specific motifs are present in a network with a frequency that is significantly different to chance. This can be achieved by repeated sampling from a network in order to construct a <em>motif frequency spectrum</em> (see <a class="reference internal" href="#histogram"><span class="std std-numref">Fig. 2</span></a>). Motif analysis has revealed functionally important features in the nervous systems of the macaque, cat and <em>C. elegans</em> <span id="id1">[<a class="reference internal" href="#id8">2</a>]</span>.</p>
+<p>A motif is a subgraph with a particular topological structure; for example, there are 13 possible motifs consisting of 3 nodes (see <a class="reference internal" href="#motifs"><span class="std std-numref">Fig. 1</span></a>). The aim of motif analysis is to determine which specific motifs are present in a network with a frequency that is significantly different to chance. This can be achieved by repeated sampling from a network in order to construct a <em>motif frequency spectrum</em> (see <a class="reference internal" href="#histogram"><span class="std std-numref">Fig. 2</span></a>) and then comparing this to a suitable ‘null model’. Motif analysis has revealed functionally important features in the nervous systems of the macaque, cat and <em>C. elegans</em> <span id="id1">[<a class="reference internal" href="#id9">2</a>]</span>.</p>
 <div class="figure align-default" id="motifs">
 <a class="reference internal image-reference" href="_images/motifs.png"><img alt="_images/motifs.png" src="_images/motifs.png" style="height: 220px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 1 </span><span class="caption-text">There are 13 distinct three-node motifs in directed networks. <em>Reprinted from <span id="id2">[<a class="reference internal" href="#id10">1</a>]</span></em></span><a class="headerlink" href="#motifs" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 1 </span><span class="caption-text">There are 13 distinct three-node motifs in directed networks. <em>Reprinted from <span id="id2">[<a class="reference internal" href="#id11">1</a>]</span></em></span><a class="headerlink" href="#motifs" title="Permalink to this image">¶</a></p>
 </div>
 <div class="figure align-default" id="histogram">
 <a class="reference internal image-reference" href="_images/histogram.png"><img alt="_images/histogram.png" src="_images/histogram.png" style="height: 120px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 2 </span><span class="caption-text">The frequency spectrum of the 13 3-node motifs in four different brain networks. <em>Reprinted from <span id="id3">[<a class="reference internal" href="#id10">1</a>]</span></em></span><a class="headerlink" href="#histogram" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 2 </span><span class="caption-text">The frequency spectrum of the 13 3-node motifs in four different brain networks. <em>Reprinted from <span id="id3">[<a class="reference internal" href="#id11">1</a>]</span></em></span><a class="headerlink" href="#histogram" title="Permalink to this image">¶</a></p>
 </div>
-<p>A ‘connectome’ is a complete description of the structural connectivity of an organism’s nervous system, typically as a graph of nodes (neurons) and directed edges (synaptic connections between neurons). To date, the only whole-animal connectome to be completely determined is the nervous system of hermaphrodite <em>C. elegans</em>, comprising a graph of 460 nodes and 4887 directed edges. In a recent study the connectome of a large part of the <em>Drosophila Melanogaster</em> nervous system was published, consisting of around 25,000 neurons and 20 million synaptic connections (see <a class="reference internal" href="#drosophila"><span class="std std-numref">Fig. 3</span></a>) <span id="id4">[<a class="reference internal" href="#id9">3</a>]</span>.</p>
+<p>A ‘connectome’ is a complete description of the structural connectivity of an organism’s nervous system, typically as a graph of nodes (neurons) and directed edges (synaptic connections between neurons). To date, the only whole-animal connectome to be completely determined is the nervous system of hermaphrodite <em>C. elegans</em>, comprising a graph of 460 nodes and 4887 directed edges. In a recent study the connectome of a large part of the <em>Drosophila Melanogaster</em> nervous system was published, consisting of around 25,000 neurons and 20 million synaptic connections (see <a class="reference internal" href="#drosophila"><span class="std std-numref">Fig. 3</span></a>) <span id="id4">[<a class="reference internal" href="#id10">3</a>]</span>.</p>
 <div class="figure align-default" id="drosophila">
 <a class="reference internal image-reference" href="_images/drosophila.png"><img alt="_images/drosophila.png" src="_images/drosophila.png" style="height: 250px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 3 </span><span class="caption-text">The connectome of the highlighted portion of the drosophila central brain consists of around 25,000 neurons and 20 million synaptic connections. <em>Reprinted from <span id="id5">[<a class="reference internal" href="#id9">3</a>]</span></em></span><a class="headerlink" href="#drosophila" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 3 </span><span class="caption-text">The connectome of the highlighted portion of the drosophila central brain consists of around 25,000 neurons and 20 million synaptic connections. <em>Reprinted from <span id="id5">[<a class="reference internal" href="#id10">3</a>]</span></em></span><a class="headerlink" href="#drosophila" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 <div class="section" id="project-brief">
 <h2>Project Brief<a class="headerlink" href="#project-brief" title="Permalink to this headline">¶</a></h2>
-<p>You should perform a motif analysis of the connectome of <em>Drosophila Melanogaster</em>. By reviewing relevant scientific literature, investigate how motif analysis can be performed in nervous systems, then apply appropriate techniques to the <em>Drosophila Melanogaster</em> connectome detailed in <span id="id6">[<a class="reference internal" href="#id9">3</a>]</span>. Using diagrams and equations, clearly describe how the motif analysis is performed.</p>
+<p>You should perform a motif analysis of the connectome of <em>Drosophila Melanogaster</em>. By reviewing relevant scientific literature, investigate how motif analysis can be performed in nervous systems, then apply appropriate techniques to the <em>Drosophila Melanogaster</em> connectome detailed in <span id="id6">[<a class="reference internal" href="#id10">3</a>]</span>. Using diagrams and equations, clearly describe how the motif analysis is performed.</p>
+</div>
+<div class="section" id="suggested-breakdown">
+<h2>Suggested Breakdown<a class="headerlink" href="#suggested-breakdown" title="Permalink to this headline">¶</a></h2>
+<p>You will need to perform the following steps to complete the project, but steps 1 and 2 could be completed in either order.</p>
+<p><strong>1. Write a program which generates the motif spectrum of an arbitrary directed graph.</strong> For a given graph order <span class="math notranslate nohighlight">\(n\)</span>, you will first need to determine all possible motifs. I would suggest sticking with <span class="math notranslate nohighlight">\(n=3\)</span> since it quickly becomes <em>very</em> complicated for larger <span class="math notranslate nohighlight">\(n\)</span>. Then you can use <a class="reference external" href="https://networkx.org/">NetworkX</a> to determine if a subgraph is isomorphic to one of the motifs. See the notes for an explanation of graph isomorphisms. Finally, you will need to sample a large number of subgraphs so that you can generate the frequency spectrum. Check that your code works by generating the frequency spectrum of a small random graph or a known standard graph.</p>
+<p><strong>2. Load the <em>Drosophila</em> connectome data into Python.</strong> The data is in the form of an edge list in <code class="docutils literal notranslate"><span class="pre">.csv</span></code> format. The easiest way to load the data is using the <a class="reference external" href="https://pandas.pydata.org/docs/user_guide/index.html">Pandas</a> Python library to read it into a dataframe, which can then be converted to a NetworkX digraph. The data set is <em>very</em> large so you should use Pandas filtering to select a specific brain region to investigate (for example AL(R)). The data is in the form of a weighted graph so you will have to consider how to best turn this into an unweighted directed graph. You might end up with several disconnected graph - see the notes for how to find connected graph components.</p>
+<p><strong>3. Generate and investigate the frequency spectrum for the <em>Drosophila</em> brain region.</strong> Which motifs are present at a frequency different than would be expected due to chance? The easiest way to do this is to compare the spectrum to an equivalent random graph. It is up to you to determine what an ‘equivalent’ random graph is - the simplest is a graph with the same number of nodes and edges but there are more sophisticated ways to generate equivalent ‘null models’.</p>
+</div>
+<div class="section" id="notes">
+<h2>Notes<a class="headerlink" href="#notes" title="Permalink to this headline">¶</a></h2>
+<ol class="simple">
+<li><p>You should make good use of the available supervision. There are some tricky corners in this project, and there is a risk of getting stuck down some blind alleys if you are unlucky. I am happy to provide assistance, but that means approaching me for help.</p></li>
+<li><p>The suggested text book <span id="id7">[<a class="reference internal" href="#id11">1</a>]</span> has some good background and links to further useful information. I recommend reading Chapter 8.1 at least.</p></li>
+<li><p>Familiarise yourself with the notes, which contain fundamentals of graphs, components, subgraphs and so on.</p></li>
+</ol>
 </div>
 <div class="section" id="references">
 <h2>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
-<p id="id7"><dl class="citation">
-<dt class="label" id="id10"><span class="brackets">1</span><span class="fn-backref">(<a href="#id2">1</a>,<a href="#id3">2</a>)</span></dt>
+<p id="id8"><dl class="citation">
+<dt class="label" id="id11"><span class="brackets">1</span><span class="fn-backref">(<a href="#id2">1</a>,<a href="#id3">2</a>,<a href="#id7">3</a>)</span></dt>
 <dd><p>Alex Fornito, Andrew Zalesky, and Edward Bullmore. <em>Fundamentals of brain network analysis</em>. Academic Press, 2016.</p>
 </dd>
-<dt class="label" id="id8"><span class="brackets"><a class="fn-backref" href="#id1">2</a></span></dt>
+<dt class="label" id="id9"><span class="brackets"><a class="fn-backref" href="#id1">2</a></span></dt>
 <dd><p>Olaf Sporns and Rolf Kötter. Motifs in brain networks. <em>PLoS biology</em>, 2(11):e369, 2004.</p>
 </dd>
-<dt class="label" id="id9"><span class="brackets">3</span><span class="fn-backref">(<a href="#id4">1</a>,<a href="#id5">2</a>,<a href="#id6">3</a>)</span></dt>
+<dt class="label" id="id10"><span class="brackets">3</span><span class="fn-backref">(<a href="#id4">1</a>,<a href="#id5">2</a>,<a href="#id6">3</a>)</span></dt>
 <dd><p>C Shan Xu, Michal Januszewski, Zhiyuan Lu, Shin-ya Takemura, Kenneth J Hayworth, Gary Huang, Kazunori Shinomiya, Jeremy Maitin-Shepard, David Ackerman, Stuart Berg, and others. A connectome of the adult drosophila central brain. <em>BioRxiv</em>, 2020.</p>
 </dd>
 </dl>
