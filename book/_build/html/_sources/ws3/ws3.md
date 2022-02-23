@@ -107,27 +107,12 @@ Given a graph of a neural circuit, a **null model** is a random graph with ident
 
 ### Example
 
-{numref}`PED_R` shows the graph of a region of the *Drosophila* connectome, PED\(R), with connection weight greater than or equal to 10. The graph of PED\(R) has $n=197$ nodes and $e=516$ edges, resulting in an edge probability of $p=e/(n^2-n)=0.0134$. We construct a null model consisting of a random graph with $n=197$ nodes and edge probability $p=0.0134$ ({numref}`PED_R_rand`).
+The graph of a region of the *Drosophila* connectome, PED\(R\), with connection weight greater than or equal to 10, has $n=197$ nodes and $e=516$ edges, resulting in an edge probability of $p=e/(n^2-n)=0.0134$. We construct a null model consisting of a random graph with $n=197$ nodes and edge probability $p=0.0134$.
 
-PED(R) has average path length 2.1 and global clustering coefficient 0.69, compared to 5.3 and 0.02 for the null model.
+PED\(R\) has average path length 2.1 and global clustering coefficient 0.69, compared to 5.3 and 0.02 for the null model.
 
-  The \textbf{normalised} average path length and global clustering coefficient are $2.1/5.3=0.40$ and $0.69/0.02=34.5$ respectively.
+The **normalised** average path length and global clustering coefficient are $2.1/5.3=0.40$ and $0.69/0.02=34.5$ respectively.
 
-```{figure} matlab/graph_PED(R)_10.png
----
-height: 300px
-name: PED_R
----
-Graph of PED(R) with connection weight greater than 10
-```
-
-```{figure} matlab/graph_null_PED(R)_10.png
----
-height: 300px
-name: PED_R_rand
----
-Graph of a null model with the same number of nodes and connection density as the graph in {numref}`PED_R`.}
-```
 
 %
 %\section*{Network Motifs}
